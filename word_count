@@ -1,0 +1,23 @@
+<?php
+class WordCounter {
+    private $text;
+
+    public function __construct($text) {
+        $this->text = $text;
+    }
+
+    public function countWords() {
+        $words = str_word_count($this->text);
+        return $words;
+    }
+}
+
+// Penggunaan
+$textToCount = "Ini adalah contoh kalimat untuk dihitung jumlah katanya.";
+$wordCounter = new WordCounter($textToCount);
+$wordCount = $wordCounter->countWords();
+
+echo "Jumlah kata dalam teks: $wordCount";
+?>
+
+//Deskripsi program tersebut berfokus pada penghitungan kata
